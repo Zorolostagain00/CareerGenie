@@ -35,6 +35,7 @@ const Navigation = () => {
             <PillNav
                 logo={sparklesLogo}
                 logoAlt="Career Genie Logo"
+                siteName="Career Genie"
                 items={[
                     { label: 'Home', href: '/' },
                     { label: 'Assessment', href: '/personal-info' }

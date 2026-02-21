@@ -21,6 +21,7 @@ export interface PillNavProps {
     pillTextColor?: string;
     onMobileMenuClick?: () => void;
     initialLoadAnimation?: boolean;
+    siteName?: string;
 }
 
 const PillNav: React.FC<PillNavProps> = ({
@@ -35,7 +36,8 @@ const PillNav: React.FC<PillNavProps> = ({
     hoveredPillTextColor = '#060010',
     pillTextColor,
     onMobileMenuClick,
-    initialLoadAnimation = true
+    initialLoadAnimation = true,
+    siteName
 }) => {
     const resolvedPillTextColor = pillTextColor ?? baseColor;
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -262,14 +264,16 @@ const PillNav: React.FC<PillNavProps> = ({
                         ref={el => {
                             logoRef.current = el;
                         }}
-                        className="rounded-full p-2 inline-flex items-center justify-center overflow-hidden"
+                        className="rounded-full py-2 px-3 inline-flex items-center justify-center overflow-hidden gap-2 flex-shrink-0"
                         style={{
-                            width: 'var(--nav-h)',
                             height: 'var(--nav-h)',
                             background: 'var(--base, #000)'
                         }}
                     >
-                        <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
+                        <div className="h-full aspect-square flex-shrink-0">
+                            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
+                        </div>
+                        {siteName && <span className="text-white font-semibold whitespace-nowrap pr-2">{siteName}</span>}
                     </Link>
                 ) : (
                     <a
@@ -279,14 +283,16 @@ const PillNav: React.FC<PillNavProps> = ({
                         ref={el => {
                             logoRef.current = el;
                         }}
-                        className="rounded-full p-2 inline-flex items-center justify-center overflow-hidden"
+                        className="rounded-full py-2 px-3 inline-flex items-center justify-center overflow-hidden gap-2 flex-shrink-0"
                         style={{
-                            width: 'var(--nav-h)',
                             height: 'var(--nav-h)',
                             background: 'var(--base, #000)'
                         }}
                     >
-                        <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
+                        <div className="h-full aspect-square flex-shrink-0">
+                            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
+                        </div>
+                        {siteName && <span className="text-white font-semibold whitespace-nowrap pr-2">{siteName}</span>}
                     </a>
                 )}
 

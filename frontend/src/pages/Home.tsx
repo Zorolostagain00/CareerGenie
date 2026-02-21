@@ -64,7 +64,7 @@ const Home = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="w-full text-slate-300 mb-12 max-w-7xl mx-auto"
+                className="w-full text-slate-300 mb-12"
             >
                 <div className="flex flex-col items-center justify-center mb-12">
                     <h2 className="text-3xl font-semibold text-slate-900 mb-4 text-center">How It Works</h2>
