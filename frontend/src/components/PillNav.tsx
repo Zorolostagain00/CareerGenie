@@ -242,16 +242,16 @@ const PillNav: React.FC<PillNavProps> = ({
         ['--pill-bg']: pillColor,
         ['--hover-text']: hoveredPillTextColor,
         ['--pill-text']: resolvedPillTextColor,
-        ['--nav-h']: '42px',
-        ['--logo']: '36px',
-        ['--pill-pad-x']: '18px',
-        ['--pill-gap']: '3px'
+        ['--nav-h']: '46px',
+        ['--logo']: '38px',
+        ['--pill-pad-x']: '20px',
+        ['--pill-gap']: '6px'
     } as React.CSSProperties;
 
     return (
-        <div className="absolute top-[1em] z-[1000] w-full left-0 md:w-auto md:left-auto">
+        <div className="relative z-[1000] w-full md:w-auto flex items-center justify-center p-1.5 rounded-full backdrop-blur-xl bg-white/50 border border-white/70 shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-all duration-300 mx-4 md:mx-0 mt-4 md:mt-0">
             <nav
-                className={`w-full md:w-max flex items-center justify-between md:justify-start box-border px-4 md:px-0 ${className}`}
+                className={`w-full md:w-max flex items-center justify-between md:justify-start box-border ${className}`}
                 aria-label="Primary"
                 style={cssVars}
             >
@@ -264,16 +264,16 @@ const PillNav: React.FC<PillNavProps> = ({
                         ref={el => {
                             logoRef.current = el;
                         }}
-                        className="rounded-full py-2 px-3 inline-flex items-center justify-center overflow-hidden gap-2 flex-shrink-0"
+                        className="rounded-full py-1.5 px-2.5 inline-flex items-center justify-center overflow-hidden gap-2 flex-shrink-0 shadow-[0_4px_12px_rgba(129,140,248,0.3)] border border-white/20 hover:shadow-[0_6px_16px_rgba(129,140,248,0.5)] transition-all duration-300 hover:-translate-y-[1px]"
                         style={{
                             height: 'var(--nav-h)',
-                            background: 'var(--base, #000)'
+                            background: 'linear-gradient(135deg, var(--base, #000), #6366f1)'
                         }}
                     >
-                        <div className="h-full aspect-square flex-shrink-0">
-                            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
+                        <div className="h-[90%] aspect-square flex-shrink-0 bg-white/20 rounded-full p-1 backdrop-blur-sm shadow-inner">
+                            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block drop-shadow-md" />
                         </div>
-                        {siteName && <span className="text-white font-semibold whitespace-nowrap pr-2">{siteName}</span>}
+                        {siteName && <span className="text-white font-bold whitespace-nowrap pr-2 pl-1 text-[16px] tracking-wide drop-shadow-sm">{siteName}</span>}
                     </Link>
                 ) : (
                     <a
@@ -283,30 +283,30 @@ const PillNav: React.FC<PillNavProps> = ({
                         ref={el => {
                             logoRef.current = el;
                         }}
-                        className="rounded-full py-2 px-3 inline-flex items-center justify-center overflow-hidden gap-2 flex-shrink-0"
+                        className="rounded-full py-1.5 px-2.5 inline-flex items-center justify-center overflow-hidden gap-2 flex-shrink-0 shadow-[0_4px_12px_rgba(129,140,248,0.3)] border border-white/20 hover:shadow-[0_6px_16px_rgba(129,140,248,0.5)] transition-all duration-300 hover:-translate-y-[1px]"
                         style={{
                             height: 'var(--nav-h)',
-                            background: 'var(--base, #000)'
+                            background: 'linear-gradient(135deg, var(--base, #000), #6366f1)'
                         }}
                     >
-                        <div className="h-full aspect-square flex-shrink-0">
-                            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
+                        <div className="h-[90%] aspect-square flex-shrink-0 bg-white/20 rounded-full p-1 backdrop-blur-sm shadow-inner">
+                            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block drop-shadow-md" />
                         </div>
-                        {siteName && <span className="text-white font-semibold whitespace-nowrap pr-2">{siteName}</span>}
+                        {siteName && <span className="text-white font-bold whitespace-nowrap pr-2 pl-1 text-[16px] tracking-wide drop-shadow-sm">{siteName}</span>}
                     </a>
                 )}
 
                 <div
                     ref={navItemsRef}
-                    className="relative items-center rounded-full hidden md:flex ml-2"
+                    className="relative items-center rounded-full hidden md:flex ml-2 shadow-[0_4px_12px_rgba(129,140,248,0.25)] border border-white/20"
                     style={{
                         height: 'var(--nav-h)',
-                        background: 'var(--base, #000)'
+                        background: 'linear-gradient(135deg, var(--base, #000), #6366f1)'
                     }}
                 >
                     <ul
                         role="menubar"
-                        className="list-none flex items-stretch m-0 p-[3px] h-full"
+                        className="list-none flex items-stretch m-0 p-1 h-full"
                         style={{ gap: 'var(--pill-gap)' }}
                     >
                         {items.map((item, i) => {
@@ -361,7 +361,7 @@ const PillNav: React.FC<PillNavProps> = ({
                             );
 
                             const basePillClasses =
-                                'relative overflow-hidden inline-flex items-center justify-center h-full no-underline rounded-full box-border font-semibold text-[16px] leading-[0] uppercase tracking-[0.2px] whitespace-nowrap cursor-pointer px-0';
+                                'relative overflow-hidden inline-flex items-center justify-center h-full no-underline rounded-full box-border font-bold text-[15px] leading-[0] tracking-[0.3px] whitespace-nowrap cursor-pointer px-0 shadow-[0_2px_8px_rgba(0,0,0,0.06)]';
 
                             return (
                                 <li key={item.href} role="none" className="flex h-full">

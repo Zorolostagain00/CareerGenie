@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import {
     Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer,
     BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid
@@ -9,9 +9,9 @@ import { ArrowRight, Info, Brain, Target, Lightbulb, Sparkles, TrendingUp, Zap }
 import { useAssessment } from '../context/AssessmentContext';
 
 /* ───── animation presets ───── */
-const fadeUp = {
+const fadeUp: Variants = {
     hidden: { opacity: 0, y: 24 },
-    show: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5, ease: 'easeOut' } })
+    show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5, ease: 'easeOut' } })
 };
 
 const ResultsDashboard = () => {

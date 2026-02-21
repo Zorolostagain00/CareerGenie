@@ -6,6 +6,11 @@ export type AssessmentState = {
     cognitiveA: any;
     cognitiveB: any;
     skills: any;
+    engineering: any;
+    finance: any;
+    creative: any;
+    business: any;
+    socialHuman: any;
     personality: any;
     lifestyle: any;
     results: any;
@@ -23,6 +28,11 @@ const initialState: AssessmentState = {
     cognitiveA: {},
     cognitiveB: {},
     skills: {},
+    engineering: {},
+    finance: {},
+    creative: {},
+    business: {},
+    socialHuman: {},
     personality: {},
     lifestyle: {},
     results: null,

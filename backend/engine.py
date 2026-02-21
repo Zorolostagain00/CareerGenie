@@ -58,7 +58,7 @@ def calculate_cognitive(cog_a, cog_b):
     correct = 0
     if cog_b.sequence == 30:
         correct += 1
-    if cog_b.logic.strip().lower() in ["no", "false", "0"]:
+    if cog_b.logic.strip().lower() in ["yes", "1", "true"]:
         correct += 1
     if cog_b.speed == 180:
         correct += 1

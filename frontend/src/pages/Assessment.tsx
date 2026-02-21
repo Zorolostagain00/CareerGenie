@@ -30,74 +30,79 @@ type StemQuestion = {
 
 const STEPS: { title: string; questions: StemQuestion[] }[] = [
     {
-        title: 'Interests & Passions',
+        title: 'Interest Domains (RIASEC Model)',
         questions: [
             {
-                stem: 'Working with tools, machines, or physical objects...',
+                stem: 'Realistic (Hands-on / Physical)',
                 items: [
-                    { id: 'realistic_enjoy', text: 'Excites me & gives me energy' },
-                    { id: 'realistic_do', text: 'Is something I regularly choose to do' },
+                    { id: 'realistic_enjoy', text: 'I enjoy working with tools, machines, or physical objects.' },
+                    { id: 'realistic_do', text: 'I prefer practical tasks over theoretical discussions.' },
                 ],
             },
             {
-                stem: 'Analyzing data or solving logical problems...',
+                stem: 'Investigative (Research / Analysis)',
                 items: [
-                    { id: 'investigative_enjoy', text: 'Feels natural and fun to me' },
-                    { id: 'investigative_do', text: 'Is how I spend my free time' },
+                    { id: 'investigative_enjoy', text: 'I enjoy analyzing data or solving logical problems.' },
+                    { id: 'investigative_do', text: 'I am curious about how scientific or technical systems work.' },
                 ],
             },
             {
-                stem: 'Creating original designs, writing, or music...',
+                stem: 'Artistic (Creative / Expressive)',
                 items: [
-                    { id: 'artistic_enjoy', text: 'Makes me feel alive' },
-                    { id: 'artistic_do', text: 'Is a regular part of my life' },
+                    { id: 'artistic_enjoy', text: 'I enjoy creating original designs, writing, or visual content.' },
+                    { id: 'artistic_do', text: 'I prefer open-ended creative tasks over structured instructions.' },
                 ],
             },
             {
-                stem: 'Helping others grow or learn...',
+                stem: 'Social (Helping / Teaching)',
                 items: [
-                    { id: 'social_enjoy', text: 'Gives me deep satisfaction' },
-                    { id: 'social_do', text: 'Is something I do on a regular basis' },
+                    { id: 'social_enjoy', text: 'I feel satisfied when helping others grow or learn.' },
+                    { id: 'social_do', text: 'I enjoy working closely with people rather than systems.' },
                 ],
             },
             {
-                stem: 'Persuading, leading, or taking charge...',
+                stem: 'Enterprising (Business / Leadership)',
                 items: [
-                    { id: 'enterprising_enjoy', text: 'Energises me' },
-                    { id: 'enterprising_do', text: 'Is something I naturally gravitate toward' },
+                    { id: 'enterprising_enjoy', text: 'I enjoy persuading or influencing others.' },
+                    { id: 'enterprising_do', text: 'I like taking initiative and leading group activities.' },
                 ],
             },
             {
-                stem: 'Organising systems and following structured processes...',
+                stem: 'Conventional (Structured / Organized)',
                 items: [
-                    { id: 'conventional_enjoy', text: 'Feels satisfying and calming' },
-                    { id: 'conventional_do', text: 'Is how I prefer to work' },
+                    { id: 'conventional_enjoy', text: 'I prefer working with organized systems and structured processes.' },
+                    { id: 'conventional_do', text: 'I enjoy managing data, schedules, or detailed records.' },
                 ],
             },
         ],
     },
     {
-        title: 'Cognitive & Problem Style',
+        title: 'Cognitive & Thinking Style',
         questions: [
             {
-                stem: 'When I face an abstract or complex problem...',
+                stem: 'How do you approach problems?',
                 items: [
-                    { id: 'abstract_solving', text: 'I enjoy thinking through it deeply' },
-                    { id: 'breaking_down', text: 'I break it into smaller pieces first' },
+                    { id: 'abstract_solving', text: 'I enjoy solving abstract or theoretical problems.' },
+                    { id: 'breaking_down', text: 'I break complex problems into smaller parts to understand them.' },
+                    { id: 'pattern_recognition', text: 'I enjoy identifying patterns in numbers or systems.' },
+                    { id: 'practical_over_theory', text: 'I prefer practical application over theory.' },
                 ],
             },
             {
-                stem: 'Patterns and connections in information...',
+                stem: 'Focus and Structure',
                 items: [
-                    { id: 'pattern_recognition', text: 'I spot them quickly' },
-                    { id: 'practical_over_theory', text: 'I prefer using them practically over studying theory' },
+                    { id: 'structured_writing', text: 'I enjoy writing structured arguments or explanations.' },
+                    { id: 'deep_focus', text: 'I can focus deeply on one task for long periods.' },
+                    { id: 'statistical_reasoning', text: 'I enjoy solving problems that require statistical reasoning.' },
+                    { id: 'structured_logic', text: 'I prefer structured logical frameworks over open interpretation.' },
                 ],
             },
             {
-                stem: 'When working on a task...',
+                stem: 'Mini Cognitive Test',
                 items: [
-                    { id: 'structured_writing', text: 'I like structuring my thoughts in writing' },
-                    { id: 'deep_focus', text: 'I can stay deeply focused for long periods' },
+                    { id: 'sequence_answer', text: 'What comes next? 2, 6, 12, 20, ? (1 = 28, 2 = 30, 3 = 32, 4 = 34)' },
+                    { id: 'logic_answer', text: 'If all A are B and some B are C, can we conclude all A are C? (1 = No, 2 = Yes, 3 = Sometimes, 4 = Cannot be determined)' },
+                    { id: 'train_answer', text: 'A train travels 60 km in 1 hour. How far in 3 hours? (1 = 180, 2 = 120, 3 = 150, 4 = 240)' },
                 ],
             },
         ],
@@ -106,95 +111,157 @@ const STEPS: { title: string; questions: StemQuestion[] }[] = [
         title: 'Skill Exposure & Strength',
         questions: [
             {
-                stem: 'Mathematics and numbers...',
+                stem: 'Mathematics & Writing',
                 items: [
-                    {
-                        id: 'math_skill', text: "I'm confident in my ability"
-                    },
-                    { id: 'math_interest', text: 'I find them genuinely interesting' },
+                    { id: 'math_skill', text: "Rate your mathematics skill level. (1=Low, 5=High)" },
+                    { id: 'math_interest', text: 'Rate your interest in mathematics.' },
+                    { id: 'writing_skill', text: 'Rate your writing or communication skill.' },
+                    { id: 'writing_interest', text: 'Rate your interest in writing or communication-heavy tasks.' },
                 ],
             },
             {
-                stem: 'Writing and communication...',
+                stem: 'Coding & Creativity',
                 items: [
-                    { id: 'writing_skill', text: 'I can express ideas clearly in writing' },
-                    { id: 'writing_interest', text: 'I enjoy the process of writing' },
+                    { id: 'coding_exp', text: 'What is your coding experience level? (1=None, 2=Basic, 3=Intermediate, 4=Advanced)' },
+                    { id: 'coding_interest', text: 'Rate your interest in technical or coding tasks.' },
+                    { id: 'creative_portfolio', text: 'Have you built a creative portfolio? (1=Yes, 2=No)' },
+                    { id: 'creativity_confidence', text: 'Rate your creative confidence.' },
                 ],
             },
             {
-                stem: 'Coding and technology...',
+                stem: 'Analytical & Detail Traits',
                 items: [
-                    { id: 'coding_interest', text: 'Excites me and I want to learn more' },
-                    { id: 'creativity_confidence', text: 'I am confident in my creative ability' },
+                    { id: 'attention_to_detail', text: 'I notice small errors that others miss.' },
+                    { id: 'learn_quickly', text: 'I learn new concepts quickly.' },
+                    { id: 'large_datasets', text: 'I am comfortable working with large numerical datasets.' },
+                    { id: 'hidden_patterns', text: 'I enjoy identifying hidden patterns in complex systems.' },
+                    { id: 'probability_risk', text: 'I enjoy probability and risk calculations.' },
                 ],
+            },
+        ],
+    },
+    {
+        title: 'Engineering & Technical Specialization',
+        questions: [
+            {
+                stem: 'Systems and Structures',
+                items: [
+                    { id: 'machines_engines', text: 'I am interested in machines, engines, and mechanical systems.' },
+                    { id: 'physical_components', text: 'I enjoy understanding how physical components move and interact.' },
+                    { id: 'electrical_circuits', text: 'I am curious about electrical circuits and signal systems.' },
+                    { id: 'sensors_measurement', text: 'I enjoy working with sensors and measurement systems.' },
+                    { id: 'infrastructure', text: 'I am fascinated by buildings, bridges, and infrastructure systems.' },
+                    { id: 'large_structures', text: 'I enjoy planning large-scale physical structures.' },
+                ]
             },
             {
-                stem: 'General work habits...',
+                stem: 'Processes and Technology',
                 items: [
-                    { id: 'attention_to_detail', text: 'I pay great attention to detail' },
-                    { id: 'learn_quickly', text: 'I pick up new skills quickly' },
-                ],
-            },
+                    { id: 'chemical_reactions', text: 'I am interested in chemical reactions and industrial processes.' },
+                    { id: 'raw_materials', text: 'I enjoy understanding how raw materials transform into finished products.' },
+                    { id: 'automation_robotics', text: 'I am interested in automation and robotics systems.' },
+                    { id: 'intelligent_systems', text: 'I enjoy building intelligent systems using algorithms.' },
+                    { id: 'cybersecurity', text: 'I am curious about cybersecurity and system vulnerabilities.' },
+                ]
+            }
+        ],
+    },
+    {
+        title: 'Finance & Economics Specialization',
+        questions: [
+            {
+                stem: 'Markets and Models',
+                items: [
+                    { id: 'financial_markets', text: 'I am interested in financial markets and economic trends.' },
+                    { id: 'financial_records', text: 'I enjoy working with financial records and compliance rules.' },
+                    { id: 'financial_modeling', text: 'I prefer long-term financial modeling over short-term decisions.' },
+                    { id: 'financial_uncertainty', text: 'I am comfortable with financial uncertainty and volatility.' },
+                ]
+            }
+        ],
+    },
+    {
+        title: 'Creative Specialization',
+        questions: [
+            {
+                stem: 'Design and Expression',
+                items: [
+                    { id: 'visual_layout', text: 'I enjoy visual layout, typography, and aesthetics.' },
+                    { id: 'user_experiences', text: 'I am interested in improving user experiences and interface flows.' },
+                    { id: 'storytelling', text: 'I enjoy storytelling through video or motion.' },
+                    { id: 'functional_products', text: 'I enjoy designing functional products that solve real problems.' },
+                    { id: 'writing_vs_visuals', text: 'I prefer expressing ideas through structured writing rather than visuals.' },
+                ]
+            }
+        ],
+    },
+    {
+        title: 'Business & Strategy Specialization',
+        questions: [
+            {
+                stem: 'Strategy and Decisions',
+                items: [
+                    { id: 'strategic_problems', text: 'I enjoy solving strategic problems for organizations.' },
+                    { id: 'coordinating_teams', text: 'I enjoy coordinating between technical and non-technical teams.' },
+                    { id: 'business_decisions', text: 'I am comfortable making high-impact business decisions.' },
+                    { id: 'consumer_behavior', text: 'I enjoy analyzing consumer behavior patterns.' },
+                ]
+            }
+        ],
+    },
+    {
+        title: 'Social & Human-Centered Specialization',
+        questions: [
+            {
+                stem: 'People and Society',
+                items: [
+                    { id: 'explaining_concepts', text: 'I enjoy explaining complex concepts step-by-step.' },
+                    { id: 'human_behavior', text: 'I am deeply interested in understanding human behavior.' },
+                    { id: 'governance_systems', text: 'I am interested in governance and public systems.' },
+                    { id: 'workplace_culture', text: 'I enjoy managing workplace culture and people dynamics.' },
+                ]
+            }
         ],
     },
     {
         title: 'Personality & Work Style',
         questions: [
             {
-                stem: 'Taking risks and trying new things...',
+                stem: 'Traits and Environments',
                 items: [
-                    { id: 'risk_comfort', text: 'Feels exciting rather than scary' },
-                    { id: 'stability_preference', text: 'I prefer stability over adventure (reverse)' },
-                ],
-            },
-            {
-                stem: 'Working with others versus alone...',
-                items: [
-                    { id: 'leadership', text: 'I naturally take the lead in a group' },
-                    { id: 'independence', text: 'I do my best work independently' },
-                ],
-            },
-            {
-                stem: 'Dealing with pressure...',
-                items: [
-                    { id: 'stress_handling', text: 'I stay calm under pressure' },
-                    { id: 'structure_preference', text: 'I work best with clear rules and structure' },
-                ],
-            },
+                    { id: 'risk_comfort', text: 'I am comfortable taking calculated risks.' },
+                    { id: 'stability_preference', text: 'I prefer stable environments over uncertain ones.' },
+                    { id: 'leadership', text: 'I enjoy leading teams.' },
+                    { id: 'independence', text: 'I prefer working independently rather than in teams.' },
+                    { id: 'stress_handling', text: 'I stay calm under pressure.' },
+                    { id: 'structure_preference', text: 'I prefer structured routines over flexible work.' },
+                    { id: 'adaptability', text: 'I adapt quickly to changing environments.' },
+                    { id: 'uncertainty_handling', text: 'I handle uncertainty well.' },
+                ]
+            }
         ],
     },
     {
-        title: 'Lifestyle & Orientation',
+        title: 'Lifestyle & Long-Term Orientation',
         questions: [
             {
-                stem: 'Long-term commitments...',
+                stem: 'Goals and Values',
                 items: [
-                    {
-                        id: 'long_study_tolerance', text: "I'm okay with years of study for the right career"
-                    },
-                    { id: 'income_vs_wlb', text: "I'd choose higher income even if it means less free time" },
-                ],
-            },
-            {
-                stem: 'Exploring new horizons...',
-                items: [
-                    {
-                        id: 'relocation_openness', text: "I'm open to relocating for opportunities"
-                    },
-                    { id: 'social_impact_priority', text: 'Making a social impact is important to me' },
-                ],
-            },
-            {
-                stem: 'Entrepreneurial spirit...',
-                items: [
-                    { id: 'entrepreneurial_openness', text: "I'd love to start my own venture someday" },
-                ],
-            },
+                    { id: 'long_study_tolerance', text: 'I am willing to study for many years for the right career.' },
+                    { id: 'income_vs_wlb', text: 'I prioritize high income over work-life balance.' },
+                    { id: 'relocation_openness', text: 'I am open to relocating for career opportunities.' },
+                    { id: 'social_impact_priority', text: 'I value social impact over financial success.' },
+                    { id: 'entrepreneurial_openness', text: 'I am open to starting my own venture in the future.' },
+                    { id: 'competitive_environments', text: 'I am comfortable with highly competitive environments.' },
+                    { id: 'predictable_paths', text: 'I prefer predictable career paths over uncertain ones.' },
+                    { id: 'intellectual_challenge', text: 'I value intellectual challenge over financial rewards.' },
+                ]
+            }
         ],
     },
 ];
 
-const SCALE_SIZE = 7; // number of radio circles
+const SCALE_SIZE = 5; // number of radio circles
 
 /* ─── Styles (CSS-in-JS) ─── */
 const styles = {
@@ -278,10 +345,7 @@ const styles = {
         fontStyle: 'italic',
     } as React.CSSProperties,
     circle: (selected: boolean, idx: number) => {
-        // size gradient: smallest in middle, larger at edges
-        const mid = (SCALE_SIZE - 1) / 2;
-        const distFromMid = Math.abs(idx - mid);
-        const size = 24 + distFromMid * 4;
+        const size = 32;
         return {
             width: `${size}px`,
             height: `${size}px`,
@@ -340,75 +404,137 @@ const Assessment = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    /* Map 1-7 radio answers → original 1-5 scale used by backend */
-    const map7to5 = (v: number | undefined): number => {
-        if (!v) return 3;
-        return Math.round(((v - 1) / 6) * 4 + 1);
+    /* Since we now strictly use 1-5 scale in UI, map5to10 easily scales 1-5 to 1-10 */
+    const map5to10 = (v: number | undefined): number => {
+        if (!v) return 5;
+        // 1=2, 2=4, 3=6, 4=8, 5=10
+        return v * 2;
     };
 
-    /* Map 1-7 radio answers → original 1-10 scale used by backend */
-    const map7to10 = (v: number | undefined): number => {
-        if (!v) return 5;
-        return Math.round(((v - 1) / 6) * 9 + 1);
+    const getVal = (v: number | undefined): number => {
+        if (!v) return 3;
+        return v;
     };
 
     const handleSubmit = async () => {
         setIsSubmitting(true);
 
         const riasec = {
-            realistic: map7to5(Math.max(answers.realistic_enjoy || 3, answers.realistic_do || 3)),
-            investigative: map7to5(Math.max(answers.investigative_enjoy || 3, answers.investigative_do || 3)),
-            artistic: map7to5(Math.max(answers.artistic_enjoy || 3, answers.artistic_do || 3)),
-            social: map7to5(Math.max(answers.social_enjoy || 3, answers.social_do || 3)),
-            enterprising: map7to5(Math.max(answers.enterprising_enjoy || 3, answers.enterprising_do || 3)),
-            conventional: map7to5(Math.max(answers.conventional_enjoy || 3, answers.conventional_do || 3)),
+            realistic: getVal(Math.max(answers.realistic_enjoy || 3, answers.realistic_do || 3)),
+            investigative: getVal(Math.max(answers.investigative_enjoy || 3, answers.investigative_do || 3)),
+            artistic: getVal(Math.max(answers.artistic_enjoy || 3, answers.artistic_do || 3)),
+            social: getVal(Math.max(answers.social_enjoy || 3, answers.social_do || 3)),
+            enterprising: getVal(Math.max(answers.enterprising_enjoy || 3, answers.enterprising_do || 3)),
+            conventional: getVal(Math.max(answers.conventional_enjoy || 3, answers.conventional_do || 3)),
         };
 
         const cogA = {
-            abstract_solving: map7to5(answers.abstract_solving),
-            breaking_down: map7to5(answers.breaking_down),
-            pattern_recognition: map7to5(answers.pattern_recognition),
-            practical_over_theory: map7to5(answers.practical_over_theory),
-            structured_writing: map7to5(answers.structured_writing),
-            deep_focus: map7to5(answers.deep_focus),
+            abstract_solving: getVal(answers.abstract_solving),
+            breaking_down: getVal(answers.breaking_down),
+            pattern_recognition: getVal(answers.pattern_recognition),
+            practical_over_theory: getVal(answers.practical_over_theory),
+            structured_writing: getVal(answers.structured_writing),
+            deep_focus: getVal(answers.deep_focus),
+            statistical_reasoning: getVal(answers.statistical_reasoning),
+            structured_logic: getVal(answers.structured_logic),
         };
 
-        const cogB = { sequence: 0, logic: '', speed: 0 };
+        const cogB = {
+            sequence: answers.sequence_answer === 1 ? 30 : 0,
+            logic: answers.logic_answer === 1 ? "yes" : "no",
+            speed: answers.train_answer === 1 ? 180 : 0
+        };
 
         const skills = {
-            math_skill: map7to10(answers.math_skill),
-            math_interest: map7to10(answers.math_interest),
-            writing_skill: map7to10(answers.writing_skill),
-            writing_interest: map7to10(answers.writing_interest),
-            coding: 'Basic',
-            coding_interest: map7to10(answers.coding_interest),
-            creativity_portfolio: false,
-            creativity_confidence: map7to10(answers.creativity_confidence),
-            attention_to_detail: map7to5(answers.attention_to_detail),
-            learn_quickly: map7to5(answers.learn_quickly),
+            math_skill: map5to10(answers.math_skill),
+            math_interest: map5to10(answers.math_interest),
+            writing_skill: map5to10(answers.writing_skill),
+            writing_interest: map5to10(answers.writing_interest),
+            coding: answers.coding_exp === 1 ? 'None' : answers.coding_exp === 2 ? 'Basic' : answers.coding_exp === 3 ? 'Intermediate' : answers.coding_exp === 4 ? 'Advanced' : 'Advanced',
+            coding_interest: map5to10(answers.coding_interest),
+            creativity_portfolio: answers.creative_portfolio === 1,
+            creativity_confidence: map5to10(answers.creativity_confidence),
+            attention_to_detail: getVal(answers.attention_to_detail),
+            learn_quickly: getVal(answers.learn_quickly),
+            large_datasets: getVal(answers.large_datasets),
+            hidden_patterns: getVal(answers.hidden_patterns),
+            probability_risk: getVal(answers.probability_risk),
+        };
+
+        const engineering = {
+            machines_engines: getVal(answers.machines_engines),
+            physical_components: getVal(answers.physical_components),
+            electrical_circuits: getVal(answers.electrical_circuits),
+            sensors_measurement: getVal(answers.sensors_measurement),
+            infrastructure: getVal(answers.infrastructure),
+            large_structures: getVal(answers.large_structures),
+            chemical_reactions: getVal(answers.chemical_reactions),
+            raw_materials: getVal(answers.raw_materials),
+            automation_robotics: getVal(answers.automation_robotics),
+            intelligent_systems: getVal(answers.intelligent_systems),
+            cybersecurity: getVal(answers.cybersecurity),
+        };
+
+        const finance = {
+            financial_markets: getVal(answers.financial_markets),
+            financial_records: getVal(answers.financial_records),
+            financial_modeling: getVal(answers.financial_modeling),
+            financial_uncertainty: getVal(answers.financial_uncertainty),
+        };
+
+        const creative = {
+            visual_layout: getVal(answers.visual_layout),
+            user_experiences: getVal(answers.user_experiences),
+            storytelling: getVal(answers.storytelling),
+            functional_products: getVal(answers.functional_products),
+            writing_vs_visuals: getVal(answers.writing_vs_visuals),
+        };
+
+        const business = {
+            strategic_problems: getVal(answers.strategic_problems),
+            coordinating_teams: getVal(answers.coordinating_teams),
+            business_decisions: getVal(answers.business_decisions),
+            consumer_behavior: getVal(answers.consumer_behavior),
+        };
+
+        const socialHuman = {
+            explaining_concepts: getVal(answers.explaining_concepts),
+            human_behavior: getVal(answers.human_behavior),
+            governance_systems: getVal(answers.governance_systems),
+            workplace_culture: getVal(answers.workplace_culture),
         };
 
         const personality = {
-            risk_comfort: map7to5(answers.risk_comfort),
-            stability_preference: map7to5(answers.stability_preference),
-            leadership: map7to5(answers.leadership),
-            independence: map7to5(answers.independence),
-            stress_handling: map7to5(answers.stress_handling),
-            structure_preference: map7to5(answers.structure_preference),
+            risk_comfort: getVal(answers.risk_comfort),
+            stability_preference: getVal(answers.stability_preference),
+            leadership: getVal(answers.leadership),
+            independence: getVal(answers.independence),
+            stress_handling: getVal(answers.stress_handling),
+            structure_preference: getVal(answers.structure_preference),
+            adaptability: getVal(answers.adaptability),
+            uncertainty_handling: getVal(answers.uncertainty_handling),
         };
 
         const lifestyle = {
-            long_study_tolerance: map7to5(answers.long_study_tolerance),
-            income_vs_wlb: map7to5(answers.income_vs_wlb),
-            relocation_openness: map7to5(answers.relocation_openness),
-            social_impact_priority: map7to5(answers.social_impact_priority),
-            entrepreneurial_openness: map7to5(answers.entrepreneurial_openness),
+            long_study_tolerance: getVal(answers.long_study_tolerance),
+            income_vs_wlb: getVal(answers.income_vs_wlb),
+            relocation_openness: getVal(answers.relocation_openness),
+            social_impact_priority: getVal(answers.social_impact_priority),
+            entrepreneurial_openness: getVal(answers.entrepreneurial_openness),
+            competitive_environments: getVal(answers.competitive_environments),
+            predictable_paths: getVal(answers.predictable_paths),
+            intellectual_challenge: getVal(answers.intellectual_challenge),
         };
 
         updateSection('riasec', riasec);
         updateSection('cognitiveA', cogA);
         updateSection('cognitiveB', cogB);
         updateSection('skills', skills);
+        updateSection('engineering', engineering);
+        updateSection('finance', finance);
+        updateSection('creative', creative);
+        updateSection('business', business);
+        updateSection('socialHuman', socialHuman);
         updateSection('personality', personality);
         updateSection('lifestyle', lifestyle);
 
@@ -419,6 +545,11 @@ const Assessment = () => {
                 cognitive_a: cogA,
                 cognitive_b: cogB,
                 skills,
+                engineering,
+                finance,
+                creative,
+                business,
+                social_human: socialHuman,
                 personality,
                 lifestyle,
             };
@@ -464,13 +595,27 @@ const Assessment = () => {
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentStep}
-                        initial={{ opacity: 0, y: 18 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -18 }}
-                        transition={{ duration: 0.3 }}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: { staggerChildren: 0.15 }
+                            },
+                            exit: { opacity: 0, y: -18, transition: { duration: 0.2 } }
+                        }}
                     >
                         {step.questions.map((q, qi) => (
-                            <div key={qi} style={styles.card}>
+                            <motion.div
+                                key={qi}
+                                style={styles.card}
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                                }}
+                            >
                                 <div style={styles.stem}>{q.stem}</div>
                                 {q.items.map((item, ii) => (
                                     <div key={item.id} style={styles.itemWrap}>
@@ -512,7 +657,7 @@ const Assessment = () => {
                                         </div>
                                     </div>
                                 ))}
-                            </div>
+                            </motion.div>
                         ))}
                     </motion.div>
                 </AnimatePresence>
