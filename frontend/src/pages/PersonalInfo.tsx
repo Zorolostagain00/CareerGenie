@@ -31,16 +31,16 @@ const PersonalInfo = () => {
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="w-full max-w-lg bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 shadow-2xl"
+                className="w-full max-w-lg bg-white/80 backdrop-blur-xl border border-slate-200 rounded-2xl p-8 shadow-xl"
             >
-                <h2 className="text-3xl font-semibold mb-2 text-white">Let's get started</h2>
-                <p className="text-slate-400 mb-8 text-sm">
+                <h2 className="text-3xl font-semibold mb-2 text-slate-900">Let's get started</h2>
+                <p className="text-slate-600 mb-8 text-sm">
                     We need a little context to make our recommendations accurate. Your data is used only for modeling.
                 </p>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                     <div>
-                        <label className="block text-sm font-medium text-slate-300 mb-1.5">Full Name</label>
+                        <label className="block text-sm font-medium text-slate-700 mb-1.5">Full Name</label>
                         <input
                             required
                             type="text"
@@ -48,12 +48,12 @@ const PersonalInfo = () => {
                             value={formData.name}
                             onChange={handleChange}
                             placeholder="Alex Walker"
-                            className="w-full bg-slate-950/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-sans"
+                            className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-sans"
                         />
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-slate-300 mb-1.5">Age</label>
+                        <label className="block text-sm font-medium text-slate-700 mb-1.5">Age</label>
                         <input
                             required
                             type="number"
@@ -62,17 +62,17 @@ const PersonalInfo = () => {
                             onChange={handleChange}
                             placeholder="e.g. 21"
                             min="13" max="100"
-                            className="w-full bg-slate-950/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-sans"
+                            className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-sans"
                         />
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-slate-300 mb-1.5">Education Level</label>
+                        <label className="block text-sm font-medium text-slate-700 mb-1.5">Education Level</label>
                         <select
                             name="education_level"
                             value={formData.education_level}
                             onChange={handleChange}
-                            className="w-full bg-slate-950/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-sans appearance-none"
+                            className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-sans appearance-none"
                         >
                             <option value="Below 10th">Below 10th Grade</option>
                             <option value="10th">10th Grade</option>
@@ -88,7 +88,7 @@ const PersonalInfo = () => {
                             animate={{ opacity: 1, height: 'auto' }}
                             className="overflow-hidden"
                         >
-                            <label className="block text-sm font-medium text-slate-300 mb-1.5">Current Degree / Field of Study</label>
+                            <label className="block text-sm font-medium text-slate-700 mb-1.5">Current Degree / Field of Study</label>
                             <input
                                 required
                                 type="text"
@@ -96,12 +96,12 @@ const PersonalInfo = () => {
                                 value={formData.degree}
                                 onChange={handleChange}
                                 placeholder="e.g. B.Tech Computer Science"
-                                className="w-full bg-slate-950/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-sans"
+                                className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-sans"
                             />
                         </motion.div>
                     )}
 
-                    <div className="mt-4 pt-6 border-t border-slate-700/50">
+                    <div className="mt-4 pt-6 border-t border-slate-200">
                         <button
                             type="submit"
                             className="w-full group relative inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-indigo-500 hover:bg-indigo-400 text-white rounded-lg font-medium transition-all shadow-[0_0_20px_rgba(99,102,241,0.2)]"

@@ -7,12 +7,13 @@ import Assessment from './pages/Assessment';
 import ResultsDashboard from './pages/ResultsDashboard';
 import CareerRoadmap from './pages/CareerRoadmap';
 import { AssessmentProvider } from './context/AssessmentContext';
+import { Footerdemo } from '@/components/ui/footer-section';
 
 function App() {
   return (
     <AssessmentProvider>
       <Router>
-        <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-indigo-500/30">
+        <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-indigo-500/30">
           <Navigation />
           <main className="container mx-auto px-4 py-8">
             <Routes>
@@ -23,6 +24,7 @@ function App() {
               <Route path="/roadmap" element={<CareerRoadmap />} />
             </Routes>
           </main>
+          <Footerdemo />
         </div>
       </Router>
     </AssessmentProvider>
@@ -30,3 +32,4 @@ function App() {
 }
 
 export default App;
+

@@ -20,7 +20,7 @@ export const CustomSlider = ({ value, min, max, onChange, labels }: SliderProps)
                 min={min}
                 step={1}
             >
-                <RadixSlider.Track className="bg-slate-800 relative grow rounded-full h-[4px] overflow-hidden">
+                <RadixSlider.Track className="bg-slate-200 relative grow rounded-full h-[4px] overflow-hidden">
                     <RadixSlider.Range className="absolute bg-indigo-500 h-full" />
                 </RadixSlider.Track>
                 <RadixSlider.Thumb

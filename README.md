@@ -61,7 +61,7 @@ The frontend is a Vite + React application styled with Tailwind CSS v4.
    ```bash
    npm run dev
    ```
-   The frontend will be available at `http://localhost:5173`.
+   The frontend will be available at `http://localhost:5175`.
 
 ## Deployment Instructions
 
