@@ -1,0 +1,222 @@
+{
+  "clusters": [
+    "Engineering/Tech",
+    "Research/Academia",
+    "Creative/Design",
+    "Business/Management",
+    "Social Impact/Education",
+    "Data/Structured"
+  ],
+  "roles": [
+    {
+      "id": "chemical_engineer",
+      "title": "Chemical Engineer",
+      "cluster": "Engineering/Tech",
+      "riasec": { "primary": "Investigative", "secondary": "Realistic" },
+      "cognitive_orientation": "Applied",
+      "skills_required": { "math": 0.7, "writing": 0.3, "coding": 0.0, "creativity": 0.2 },
+      "personality": { "risk": -0.2, "stability": 0.6, "leadership": 0.3, "independence": 0.4, "stress": 0.7, "structure": 0.8 },
+      "lifestyle": { "long_study_tolerance": 0.7, "burnout_risk_penalty": 0.5 }
+    },
+    {
+      "id": "instrumentation_engineer",
+      "title": "Instrumentation Engineer",
+      "cluster": "Engineering/Tech",
+      "riasec": { "primary": "Realistic", "secondary": "Investigative" },
+      "cognitive_orientation": "Applied",
+      "skills_required": { "math": 0.7, "coding": 0.33, "writing": 0.2, "creativity": 0.2 },
+      "personality": { "risk": -0.3, "stability": 0.7, "leadership": 0.2, "independence": 0.5, "stress": 0.6, "structure": 0.8 },
+      "lifestyle": { "long_study_tolerance": 0.6, "burnout_risk_penalty": 0.4 }
+    },
+    {
+      "id": "mechanical_engineer",
+      "title": "Mechanical Engineer",
+      "cluster": "Engineering/Tech",
+      "riasec": { "primary": "Realistic", "secondary": "Investigative" },
+      "cognitive_orientation": "Applied",
+      "skills_required": { "math": 0.7, "coding": 0.0, "writing": 0.2, "creativity": 0.4 },
+      "personality": { "risk": -0.1, "stability": 0.6, "leadership": 0.4, "independence": 0.5, "stress": 0.6, "structure": 0.7 },
+      "lifestyle": { "long_study_tolerance": 0.6, "burnout_risk_penalty": 0.4 }
+    },
+    {
+      "id": "electrical_engineer",
+      "title": "Electrical Engineer",
+      "cluster": "Engineering/Tech",
+      "riasec": { "primary": "Investigative", "secondary": "Realistic" },
+      "cognitive_orientation": "Applied",
+      "skills_required": { "math": 0.8, "coding": 0.33, "writing": 0.2, "creativity": 0.3 },
+      "personality": { "risk": -0.1, "stability": 0.6, "leadership": 0.3, "independence": 0.5, "stress": 0.6, "structure": 0.7 },
+      "lifestyle": { "long_study_tolerance": 0.6, "burnout_risk_penalty": 0.5 }
+    },
+    {
+      "id": "civil_engineer",
+      "title": "Civil Engineer",
+      "cluster": "Engineering/Tech",
+      "riasec": { "primary": "Realistic", "secondary": "Enterprising" },
+      "cognitive_orientation": "Applied",
+      "skills_required": { "math": 0.6, "coding": 0.0, "writing": 0.3, "creativity": 0.3 },
+      "personality": { "risk": 0.2, "stability": 0.5, "leadership": 0.6, "independence": 0.4, "stress": 0.7, "structure": 0.8 },
+      "lifestyle": { "long_study_tolerance": 0.5, "burnout_risk_penalty": 0.6 }
+    },
+    {
+      "id": "software_engineer",
+      "title": "Software Engineer",
+      "cluster": "Engineering/Tech",
+      "riasec": { "primary": "Investigative", "secondary": "Conventional" },
+      "cognitive_orientation": "Analytical",
+      "skills_required": { "math": 0.6, "coding": 0.66, "writing": 0.3, "creativity": 0.5 },
+      "personality": { "risk": 0.1, "stability": 0.4, "leadership": 0.2, "independence": 0.8, "stress": 0.6, "structure": 0.5 },
+      "lifestyle": { "long_study_tolerance": 0.5, "burnout_risk_penalty": 0.8 }
+    },
+    {
+      "id": "data_scientist",
+      "title": "Data Scientist",
+      "cluster": "Data/Structured",
+      "riasec": { "primary": "Investigative", "secondary": "Conventional" },
+      "cognitive_orientation": "Analytical",
+      "skills_required": { "math": 0.8, "coding": 0.66, "writing": 0.4, "creativity": 0.3 },
+      "personality": { "risk": -0.1, "stability": 0.5, "leadership": 0.2, "independence": 0.8, "stress": 0.5, "structure": 0.7 },
+      "lifestyle": { "long_study_tolerance": 0.7, "burnout_risk_penalty": 0.6 }
+    },
+    {
+      "id": "ai_ml_engineer",
+      "title": "AI/ML Engineer",
+      "cluster": "Engineering/Tech",
+      "riasec": { "primary": "Investigative", "secondary": "Realistic" },
+      "cognitive_orientation": "Analytical",
+      "skills_required": { "math": 0.9, "coding": 0.66, "writing": 0.3, "creativity": 0.4 },
+      "personality": { "risk": 0.2, "stability": 0.3, "leadership": 0.3, "independence": 0.7, "stress": 0.7, "structure": 0.5 },
+      "lifestyle": { "long_study_tolerance": 0.8, "burnout_risk_penalty": 0.8 }
+    },
+    {
+      "id": "cybersecurity_analyst",
+      "title": "Cybersecurity Analyst",
+      "cluster": "Data/Structured",
+      "riasec": { "primary": "Investigative", "secondary": "Conventional" },
+      "cognitive_orientation": "Applied",
+      "skills_required": { "math": 0.5, "coding": 0.33, "writing": 0.4, "creativity": 0.3 },
+      "personality": { "risk": 0.1, "stability": 0.6, "leadership": 0.4, "independence": 0.6, "stress": 0.9, "structure": 0.8 },
+      "lifestyle": { "long_study_tolerance": 0.6, "burnout_risk_penalty": 0.9 }
+    },
+    {
+      "id": "ux_ui_designer",
+      "title": "UX/UI Designer",
+      "cluster": "Creative/Design",
+      "riasec": { "primary": "Artistic", "secondary": "Investigative" },
+      "cognitive_orientation": "Hybrid",
+      "skills_required": { "math": 0.1, "coding": 0.0, "writing": 0.4, "creativity": 0.8 },
+      "personality": { "risk": 0.2, "stability": 0.4, "leadership": 0.3, "independence": 0.6, "stress": 0.4, "structure": 0.3 },
+      "lifestyle": { "long_study_tolerance": 0.3, "burnout_risk_penalty": 0.4 }
+    },
+    {
+      "id": "product_designer",
+      "title": "Product Designer",
+      "cluster": "Creative/Design",
+      "riasec": { "primary": "Artistic", "secondary": "Enterprising" },
+      "cognitive_orientation": "Hybrid",
+      "skills_required": { "math": 0.2, "coding": 0.0, "writing": 0.5, "creativity": 0.9 },
+      "personality": { "risk": 0.4, "stability": 0.3, "leadership": 0.5, "independence": 0.5, "stress": 0.5, "structure": 0.4 },
+      "lifestyle": { "long_study_tolerance": 0.3, "burnout_risk_penalty": 0.5 }
+    },
+    {
+      "id": "content_writer",
+      "title": "Content Writer",
+      "cluster": "Creative/Design",
+      "riasec": { "primary": "Artistic", "secondary": "Conventional" },
+      "cognitive_orientation": "Applied",
+      "skills_required": { "math": 0.0, "coding": 0.0, "writing": 0.9, "creativity": 0.7 },
+      "personality": { "risk": 0.1, "stability": 0.4, "leadership": 0.1, "independence": 0.8, "stress": 0.4, "structure": 0.4 },
+      "lifestyle": { "long_study_tolerance": 0.4, "burnout_risk_penalty": 0.5 }
+    },
+    {
+      "id": "product_manager",
+      "title": "Product Manager",
+      "cluster": "Business/Management",
+      "riasec": { "primary": "Enterprising", "secondary": "Social" },
+      "cognitive_orientation": "Hybrid",
+      "skills_required": { "math": 0.4, "coding": 0.0, "writing": 0.7, "creativity": 0.6 },
+      "personality": { "risk": 0.6, "stability": 0.3, "leadership": 0.9, "independence": 0.4, "stress": 0.8, "structure": 0.5 },
+      "lifestyle": { "long_study_tolerance": 0.4, "burnout_risk_penalty": 0.8 }
+    },
+    {
+      "id": "financial_analyst",
+      "title": "Financial Analyst",
+      "cluster": "Business/Management",
+      "riasec": { "primary": "Conventional", "secondary": "Enterprising" },
+      "cognitive_orientation": "Analytical",
+      "skills_required": { "math": 0.8, "coding": 0.0, "writing": 0.5, "creativity": 0.1 },
+      "personality": { "risk": 0.4, "stability": 0.6, "leadership": 0.3, "independence": 0.6, "stress": 0.8, "structure": 0.9 },
+      "lifestyle": { "long_study_tolerance": 0.6, "burnout_risk_penalty": 0.8 }
+    },
+    {
+      "id": "consultant",
+      "title": "Consultant",
+      "cluster": "Business/Management",
+      "riasec": { "primary": "Enterprising", "secondary": "Investigative" },
+      "cognitive_orientation": "Analytical",
+      "skills_required": { "math": 0.6, "coding": 0.0, "writing": 0.8, "creativity": 0.5 },
+      "personality": { "risk": 0.7, "stability": 0.2, "leadership": 0.6, "independence": 0.7, "stress": 0.9, "structure": 0.4 },
+      "lifestyle": { "long_study_tolerance": 0.6, "burnout_risk_penalty": 0.9 }
+    },
+    {
+      "id": "teacher",
+      "title": "Teacher",
+      "cluster": "Social Impact/Education",
+      "riasec": { "primary": "Social", "secondary": "Artistic" },
+      "cognitive_orientation": "Applied",
+      "skills_required": { "math": 0.2, "coding": 0.0, "writing": 0.6, "creativity": 0.6 },
+      "personality": { "risk": -0.4, "stability": 0.8, "leadership": 0.7, "independence": 0.3, "stress": 0.6, "structure": 0.7 },
+      "lifestyle": { "long_study_tolerance": 0.5, "burnout_risk_penalty": 0.7 }
+    },
+    {
+      "id": "psychologist",
+      "title": "Psychologist",
+      "cluster": "Social Impact/Education",
+      "riasec": { "primary": "Social", "secondary": "Investigative" },
+      "cognitive_orientation": "Hybrid",
+      "skills_required": { "math": 0.3, "coding": 0.0, "writing": 0.7, "creativity": 0.3 },
+      "personality": { "risk": -0.2, "stability": 0.6, "leadership": 0.4, "independence": 0.7, "stress": 0.8, "structure": 0.5 },
+      "lifestyle": { "long_study_tolerance": 0.9, "burnout_risk_penalty": 0.7 }
+    },
+    {
+      "id": "hr_manager",
+      "title": "HR Manager",
+      "cluster": "Business/Management",
+      "riasec": { "primary": "Social", "secondary": "Enterprising" },
+      "cognitive_orientation": "Applied",
+      "skills_required": { "math": 0.2, "coding": 0.0, "writing": 0.6, "creativity": 0.3 },
+      "personality": { "risk": -0.1, "stability": 0.6, "leadership": 0.6, "independence": 0.4, "stress": 0.6, "structure": 0.7 },
+      "lifestyle": { "long_study_tolerance": 0.4, "burnout_risk_penalty": 0.5 }
+    },
+    {
+      "id": "business_analyst",
+      "title": "Business Analyst",
+      "cluster": "Data/Structured",
+      "riasec": { "primary": "Conventional", "secondary": "Enterprising" },
+      "cognitive_orientation": "Analytical",
+      "skills_required": { "math": 0.6, "coding": 0.0, "writing": 0.6, "creativity": 0.3 },
+      "personality": { "risk": 0.1, "stability": 0.6, "leadership": 0.4, "independence": 0.5, "stress": 0.6, "structure": 0.8 },
+      "lifestyle": { "long_study_tolerance": 0.5, "burnout_risk_penalty": 0.6 }
+    },
+    {
+      "id": "risk_analyst",
+      "title": "Risk Analyst",
+      "cluster": "Data/Structured",
+      "riasec": { "primary": "Conventional", "secondary": "Investigative" },
+      "cognitive_orientation": "Analytical",
+      "skills_required": { "math": 0.7, "coding": 0.0, "writing": 0.5, "creativity": 0.1 },
+      "personality": { "risk": -0.4, "stability": 0.8, "leadership": 0.3, "independence": 0.6, "stress": 0.7, "structure": 0.9 },
+      "lifestyle": { "long_study_tolerance": 0.6, "burnout_risk_penalty": 0.6 }
+    },
+    {
+      "id": "supply_chain_analyst",
+      "title": "Supply Chain Analyst",
+      "cluster": "Data/Structured",
+      "riasec": { "primary": "Conventional", "secondary": "Realistic" },
+      "cognitive_orientation": "Applied",
+      "skills_required": { "math": 0.6, "coding": 0.0, "writing": 0.4, "creativity": 0.2 },
+      "personality": { "risk": 0.1, "stability": 0.7, "leadership": 0.4, "independence": 0.5, "stress": 0.7, "structure": 0.8 },
+      "lifestyle": { "long_study_tolerance": 0.4, "burnout_risk_penalty": 0.6 }
+    }
+  ]
+}
